@@ -263,4 +263,10 @@ def check_table_snapshot_consistency():
     print("Run complete.\n")
 
 # ==== LAMBDA HANDLER ====
-def lambda_handler(e_
+def lambda_handler(e_vent, context):
+    check_table_snapshot_consistency()
+
+# ==== LOCAL RUN ====
+if __name__ == "__main__":
+    check_table_snapshot_consistency()
+
